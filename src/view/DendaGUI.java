@@ -20,7 +20,8 @@ public class DendaGUI extends JFrame {
         this.parentDashboard = parent; // Simpan referensi parent
 
         setTitle("Laporan Denda");
-        setSize(700, 400);
+        // setSize(700, 400);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
