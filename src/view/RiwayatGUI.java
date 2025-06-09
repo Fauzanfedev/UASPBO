@@ -20,8 +20,7 @@ public class RiwayatGUI extends JFrame {
         this.currentUserId = currentUserId;
 
         setTitle("Riwayat Peminjaman");
-        setSize(800, 400);
-        setLocationRelativeTo(null);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         String[] kolom = {"ID Peminjaman", "Judul", "ID Anggota", "ID Buku", "Tanggal Pinjam", "Tenggat Kembali", "Status", "Denda"};
