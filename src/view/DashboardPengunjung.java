@@ -27,6 +27,12 @@ public class DashboardPengunjung extends JFrame {
         JButton btnRiwayat = new JButton("Riwayat Peminjaman");
         JButton btnLogout = new JButton("Logout");
 
+        // Set preferred sizes for buttons
+        Dimension buttonSize = new Dimension(200, 50);
+        btnLihatBuku.setPreferredSize(buttonSize);
+        btnRiwayat.setPreferredSize(buttonSize);
+        btnLogout.setPreferredSize(buttonSize);
+
         panel.add(label);
         panel.add(btnLihatBuku);
         panel.add(btnRiwayat);
