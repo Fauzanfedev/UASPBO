@@ -12,9 +12,10 @@ public class DashboardPengunjung extends JFrame {
         this.currentUserId = currentUserId;
 
         setTitle("Dashboard Pengunjung");
-        setSize(400, 250);
+        // setSize(400, 250);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         JPanel panel = new JPanel(new GridLayout(4, 1, 10, 10));
         panel.setBorder(BorderFactory.createEmptyBorder(30, 50, 30, 50));
