@@ -17,7 +17,8 @@ public class PengembalianGUI extends JFrame {
         this.parentDashboard = parent; // Simpan referensi parent
 
         setTitle("Pengembalian Buku");
-        setSize(700, 400);
+        // setSize(700, 400);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
