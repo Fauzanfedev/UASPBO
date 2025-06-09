@@ -15,28 +15,91 @@ public class LoginGUI extends JFrame {
 
     public LoginGUI() {
         setTitle("Login");
-        setSize(350, 220);
+        // setSize(400, 280);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
+        setResizable(true);
 
-        JPanel panel = new JPanel(new GridLayout(4, 2, 10, 10));
-        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        // Use GridBagLayout for flexible layout
+        JPanel panel = new JPanel(new GridBagLayout());
+        panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(8, 8, 8, 8);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        panel.add(new JLabel("Username:"));
+        // Title label
+        JLabel lblTitle = new JLabel("Login");
+        lblTitle.setFont(new Font("Arial", Font.BOLD, 24));
+        lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.gridwidth = 2;
+        panel.add(lblTitle, gbc);
+
+        // Username label
+        JLabel lblUsername = new JLabel("Username:");
+        lblUsername.setFont(new Font("Arial", Font.BOLD, 14));
+        lblUsername.setHorizontalAlignment(SwingConstants.RIGHT);
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.gridwidth = 1;
+        panel.add(lblUsername, gbc);
+
+        // Username text field
         tfUsername = new JTextField();
-        panel.add(tfUsername);
+        tfUsername.setPreferredSize(new Dimension(200, 25));
+        tfUsername.setToolTipText("Enter your username");
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        panel.add(tfUsername, gbc);
 
-        panel.add(new JLabel("Password:"));
+        // Password label
+        JLabel lblPassword = new JLabel("Password:");
+        lblPassword.setFont(new Font("Arial", Font.BOLD, 14));
+        lblPassword.setHorizontalAlignment(SwingConstants.RIGHT);
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        panel.add(lblPassword, gbc);
+
+        // Password field
         pfPassword = new JPasswordField();
-        panel.add(pfPassword);
+        pfPassword.setPreferredSize(new Dimension(200, 25));
+        pfPassword.setToolTipText("Enter your password");
+        gbc.gridx = 1;
+        gbc.gridy = 2;
+        panel.add(pfPassword, gbc);
 
-        panel.add(new JLabel("Login as:"));
+        // Role label
+        JLabel lblRole = new JLabel("Login as:");
+        lblRole.setFont(new Font("Arial", Font.BOLD, 14));
+        lblRole.setHorizontalAlignment(SwingConstants.RIGHT);
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        panel.add(lblRole, gbc);
+
+        // Role combo box
         cbRole = new JComboBox<>(new String[]{"Pengunjung", "Pustakawan"});
-        panel.add(cbRole);
+        cbRole.setToolTipText("Select your role");
+        cbRole.setPreferredSize(new Dimension(200, 25));
+        gbc.gridx = 1;
+        gbc.gridy = 3;
+        panel.add(cbRole, gbc);
 
+        // Login button
         JButton btnLogin = new JButton("Login");
-        panel.add(new JLabel()); // placeholder
-        panel.add(btnLogin);
+        btnLogin.setFont(new Font("Arial", Font.BOLD, 14));
+        btnLogin.setBackground(new Color(59, 89, 182));
+        btnLogin.setForeground(Color.WHITE);
+        btnLogin.setOpaque(true);
+        btnLogin.setBorderPainted(false);
+        btnLogin.setFocusPainted(false);
+        btnLogin.setPreferredSize(new Dimension(100, 30));
+        gbc.gridx = 0;
+        gbc.gridy = 4;
+        gbc.gridwidth = 2;
+        gbc.anchor = GridBagConstraints.CENTER;
+        panel.add(btnLogin, gbc);
 
         add(panel);
 
