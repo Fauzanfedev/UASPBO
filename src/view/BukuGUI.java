@@ -24,8 +24,7 @@ public class BukuGUI extends JFrame {
         this.userRole = role;
 
         setTitle("Kelola Buku");
-        setSize(700, 500);
-        setLocationRelativeTo(null);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         JPanel panelForm = new JPanel(new GridBagLayout());
