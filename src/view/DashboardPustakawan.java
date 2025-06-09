@@ -10,9 +10,10 @@ public class DashboardPustakawan extends JFrame {
         this.userRole = role;
 
         setTitle("Dashboard Pustakawan");
-        setSize(400, 400);
+        // setSize(400, 400);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         JPanel panel = new JPanel(new GridLayout(8, 1, 10, 10));
         panel.setBorder(BorderFactory.createEmptyBorder(20, 40, 20, 40));
