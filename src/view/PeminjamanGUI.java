@@ -17,7 +17,8 @@ public class PeminjamanGUI extends JFrame {
         this.parentDashboard = parent; // Simpan referensi parent
 
         setTitle("Kelola Peminjaman");
-        setSize(700, 500);
+        // setSize(700, 500);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
